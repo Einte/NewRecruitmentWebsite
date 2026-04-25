@@ -1,0 +1,45 @@
+/* --- SUPPORT CONTENT AREA --- */
+.support-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 12px;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #38bdf8;
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+    margin-bottom: 10px;
+}
+
+/* --- FIXING THE BULLET POINTS --- */
+ul {
+    list-style: none; /* This removes those dots from your screenshot */
+    padding: 0;
+}
+
+li {
+    margin-bottom: 30px;
+    text-align: center; /* Keeps it centered like your header */
+}
+
+/* --- STYLING THE QUESTIONS --- */
+strong {
+    display: block;
+    color: #38bdf8;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    color: #94a3b8;
+    font-family: 'monospace';
+    line-height: 1.6;
+}

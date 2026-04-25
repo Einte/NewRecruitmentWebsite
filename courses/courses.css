@@ -1,0 +1,79 @@
+/* --- THE GRID --- */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- THE GLASS CARDS --- */
+.course-card {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.course-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+}
+
+/* --- IMAGE AREA --- */
+.course-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+    filter: grayscale(40%) brightness(0.8); /* Technical look */
+    transition: 0.3s;
+}
+
+.course-card:hover .course-image {
+    filter: grayscale(0%) brightness(1);
+}
+
+/* --- INFO AREA --- */
+.course-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.course-info h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #38bdf8;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.course-info p {
+    color: #94a3b8;
+    font-family: 'monospace';
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+/* --- BUTTONS --- */
+.btn-module {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-module:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    box-shadow: 0 0 15px #38bdf8;
+}
