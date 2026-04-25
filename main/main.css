@@ -557,3 +557,56 @@ footer {
     z-index: 4;
     pointer-events: none;
 }
+
+/* --- SUBTLE HUD SCANNER --- */
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* We make it taller (100px) so the glow looks soft, not like a sharp wire */
+    height: 100px; 
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(56, 189, 248, 0.2) 50%,
+        transparent
+    );
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+    z-index: 5;
+    /* This 'ease-in-out' makes the movement feel high-tech and smooth */
+    animation: laser-pulse 4s ease-in-out infinite;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Let's add a "Lens Effect" to the team photos */
+/* This makes the corners dark so the laser pops more */
+.terminal-card .image-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent 40%, rgba(15, 23, 42, 0.8) 120%);
+    z-index: 4;
+}
+
+@keyframes laser-pulse {
+    0% { transform: translateY(-20%); opacity: 0; }
+    15% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { transform: translateY(120%); opacity: 0; }
+}
+/* First card: Starts immediately (default) */
+
+/* Middle card: Wait 1.2 seconds before starting */
+.terminal-card:nth-child(2) .scan-line {
+    animation-delay: 1.1s;
+}
+
+/* Third card: Wait 2.4 seconds before starting */
+.terminal-card:nth-child(3) .scan-line {
+    animation-delay: 2.5s;
+}
