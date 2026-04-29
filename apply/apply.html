@@ -4,96 +4,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biometric Enrollment | Careers Portal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../main.css">
   <link rel="stylesheet" href="/apply/apply.css">
-</head>
+  <title>Biometric Enrollment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
-<body class="terminal-body">
+</head>
+<body>
   <header>
     <nav class="navbar">
       <ul>
         <li><a href="../index.html">Home</a></li>
-        <li><a href="./apply.html">Apply</a></li>
-        <li><a href="../contact/contact.html">Contact</a></li>
+        <li><a href="/apply/apply.html">Apply</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="apply-section">
-    <div class="terminal-window">
-      <div class="terminal-left">
-        <h2 class="terminal-title">BIOMETRIC ENROLLMENT</h2>
-
-        <form id="application-form">
-          <div class="input-row">
-            <div class="input-group">
-              <label>FIRST NAME</label>
-              <input type="text" id="first-name-field" placeholder="Awaiting..." required>
+  <main>
+    <section id="apply-section">
+      <div class="terminal-window">
+        <!-- LEFT -->
+        <div class="terminal-left">
+          <h2 class="terminal-title">BIOMETRIC ENROLLMENT</h2>
+          <form id="form">
+            <div class="input-row">
+              <div class="input-group">
+                <label>FIRST NAME</label>
+                <input type="text" id="first">
+              </div>
+              <div class="input-group">
+                <label>LAST NAME</label>
+                <input type="text" id="last">
+              </div>
             </div>
             <div class="input-group">
-              <label>LAST NAME</label>
-              <input type="text" id="last-name-field" placeholder="Awaiting..." required>
+              <label>EMAIL</label>
+              <input type="email" id="email">
             </div>
-          </div>
-
-          <div class="input-group">
-            <label>CREDENTIAL EMAIL</label>
-            <input type="email" id="email-field" placeholder="Enter email..." required>
-          </div>
-
-          <div class="file-management">
-            <div class="file-preview-zone" id="file-preview-zone">
-              <span id="file-display-name">NO FILE SELECTED</span>
-            </div>
+            <div class="file-preview-zone" id="file-name">NO FILE</div>
             <div class="action-buttons">
-              <button type="button" class="tech-btn upload-btn"
-                onclick="document.getElementById('file-input').click()">📂 CHOOSE PDF</button>
-              <input type="file" id="file-input" accept=".pdf" hidden>
-              <button type="button" id="preview-btn" class="tech-btn preview-btn">GENERATE CARD</button>
+              <button type="button" class="tech-btn" id="upload">UPLOAD</button>
+              <input type="file" id="file" hidden>
+              <button type="button" class="tech-btn" id="generate">GENERATE</button>
             </div>
-          </div>
-
-          <div class="camera-wrap">
             <div class="video-container">
-              <video id="webcam-view" autoplay playsinline></video>
-              <canvas id="capture-canvas" style="display:none;"></canvas>
-              <div class="scan-net"></div>
-              <div class="laser-bar" id="laser"></div>
+              <video id="video" autoplay playsinline></video>
+              <div class="laser" id="laser"></div>
             </div>
-            <button type="button" id="scan-button" class="tech-btn scan-btn">INITIATE FACE SCAN</button>
-            <p id="status-text">SYSTEM STATUS: STANDBY</p>
-          </div>
-        </form>
-      </div>
-
-      <div class="terminal-right">
-        <div class="id-card-modern neon-glow">
-          <div class="card-header">
-            <div class="chip"></div>
-            <span class="auth-stamp">SECURE ACCESS</span>
-          </div>
-          <div class="photo-area">
-            <img src="https://via.placeholder.com/150" id="user-photo" alt="Subject">
-          </div>
-          <div class="card-body">
-            <h3 id="preview-name">SUBJECT_NULL</h3>
-            <p><strong>UID:</strong> <span id="preview-email">---</span></p>
-
-            <div id="card-file-visual" class="card-file-thumb"></div>
-
-            <p><strong>DOC:</strong> <span id="preview-file">None</span></p>
-          </div>
-          <div class="verify-badge locked" id="badge">LOCKED</div>
-          <button type="submit" id="submit-button" class="neon-glass-btn" enabled>SEND APPLICATION</button>
+            <button type="button" class="tech-btn" id="scan">START SCAN</button>
+            <p id="status-text">STATUS: STANDBY</p>
+          </form>
         </div>
-      </div>
-    </div>
-  </section>
+        <!-- RIGHT -->
+        <div class="terminal-right">
+          <div class="id-card-modern">
+            <div class="photo-area">
+              <img id="preview-img" src="https://via.placeholder.com/150">
+            </div>
+            <h3 id="preview-name">SUBJECT_NULL</h3>
+            <p id="preview-email">---</p>
+            <p id="preview-file">NONE</p>
+            <div class="verify-badge" id="badge">LOCKED</div>
+            <button id="submit" class="neon-glass-btn" disabled>SEND</button>
+          </div>
+        </div>
 
-  <script src="../main.js"></script>
-  <script src="/apply/apply.js"></script>
+      </div>
+
+    </section>
+  </main>
+
+
+<script src="/apply/apply.js"></script>
 </body>
 
 </html>

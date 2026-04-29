@@ -10,9 +10,9 @@
 
 /* --- THE GLASS CARDS --- */
 .course-card {
-    background: rgba(15, 23, 42, 0.8);
+    background: radial-gradient(circle at center, #0b1a12 0%, #020403 100%);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    border: 1px solid rgb(68, 249, 117);
     border-radius: 12px;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -20,7 +20,7 @@
 
 .course-card:hover {
     transform: translateY(-10px) scale(1.02);
-    border-color: #38bdf8;
+    border-color: #51ff6e;
     box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
 }
 

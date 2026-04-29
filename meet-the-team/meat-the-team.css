@@ -1,16 +1,16 @@
 /* --- TEAM SECTION LAYOUT --- */
 .page-section {
-    margin-top: 100px;
-    padding: 90px 20px;
+    margin-top: 60px;
+    padding: 50px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0f172a; /* Ensure deep space background */
+    background: radial-gradient(circle at center, #0b1a12 0%, #020403 100%);
     border-radius: 20px;
     border-style: dashed;
     border-width: 2px;
-    border-color: #38bdf8; /* Cyan dashed border */
-        box-shadow: 0 0 100px rgba(4, 180, 255, 0.85); /* Subtle cyan glow */
+    border-color: #0af5be; /* Cyan dashed border */
+        box-shadow: 0 0 100px rgba(108, 255, 137, 0.85); /* Subtle cyan glow */
 }
 
 h1 {
@@ -18,35 +18,34 @@ h1 {
     color: #eaf9ff;
     text-transform: uppercase;
     letter-spacing: 4px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     text-shadow: 0 0 15px rgba(245, 251, 254, 0.5);
 }
 
 /* --- THE GRID --- */
 .team-grid {
+    margin: 20px;
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1200px;
+    max-width: 900px;
 }
 
 /* --- DARK GLASS CARDS --- */
 .team-member {
-    background: rgba(15, 23, 42, 0.8); /* Dark slate glass */
+    background: radial-gradient(circle at center, #0b1a12 0%, #020403 100%);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(56, 189, 248, 0.3);
-    border-radius: 15px;
-    padding: 40px 20px;
-    width: 300px;
+    border: 1px solid rgba(56, 248, 207, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
     text-align: center;
     transition: all 0.3s ease;
 }
 
 .team-member:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+    box-shadow: 0 0 25px rgba(87, 248, 168, 0.4);
     border-color: #38bdf8;
 }
 
@@ -55,9 +54,9 @@ h1 {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    border: 2px solid #38bdf8;
+    border: 1px solid #38bdf8;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
 }
 
