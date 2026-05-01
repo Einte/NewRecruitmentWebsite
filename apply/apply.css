@@ -37,11 +37,12 @@ body {
 }
 .terminal-window {
     display:flex;
-    width:50%;
+    width:95%;
     max-width:900px;
     border:1px solid #22c55e;
     background:rgba(10,25,18,0.9);
     border-radius: 10px;
+    margin: 0 auto;
 }
 
 /* LEFT */
