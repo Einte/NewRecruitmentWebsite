@@ -70,3 +70,41 @@ scanBtn.onclick = async () => {
     }
 };
 
+const submitBtn = document.getElementById('submit');
+
+submitBtn.addEventListener('click', async () => {
+    // 1. Gather the data from your UI
+    const enrollmentData = {
+        firstName: document.getElementById('first').value,
+        lastName: document.getElementById('last').value,
+        email: document.getElementById('email').value,
+        status: "ENROLLED",
+        timestamp: new Date().toISOString()
+    };
+
+    // Update Status
+    const statusText = document.getElementById('status-text');
+    statusText.innerText = "STATUS: TRANSMITTING...";
+
+    try {
+        // 2. Send to the Pi Zero (Replace with your Pi's actual Local IP)
+        const response = await fetch('http://192.168.4.1:5000/enroll', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(enrollmentData)
+        });
+
+        if (response.ok) {
+            statusText.innerText = "STATUS: SUCCESS - STORED ON PI";
+            document.getElementById('badge').innerText = "VERIFIED";
+            document.getElementById('badge').style.color = "#00ff00";
+        } else {
+            throw new Error("Server refused data");
+        }
+    } catch (error) {
+        console.error(error);
+        statusText.innerText = "STATUS: ERROR - PI NOT FOUND";
+        alert("Check Connection: Are you on the Pi's Private Wi-Fi?");
+    }
+});
+

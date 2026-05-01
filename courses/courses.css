@@ -77,3 +77,8 @@
     color: #0f172a;
     box-shadow: 0 0 15px #38bdf8;
 }
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}

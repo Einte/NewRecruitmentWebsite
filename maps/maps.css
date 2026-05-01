@@ -18,3 +18,8 @@
     border: 0;
     border-radius: 20px;
 }
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}

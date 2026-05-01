@@ -9,13 +9,22 @@
     margin-top: 10px;
 }
 
-.job-card h3 { color: #004a99; margin-bottom: 20px;}
-.job-tag {
+.job-card h3 { 
+    color: #04ca56; 
+    margin-bottom: 20px;
+}
 
+.job-tag {
     display: inline-block;
     background: #244c29;
     padding: 4px 10px;
     font-size: 0.8rem;
     margin-top: 60px;
     border-radius: 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
