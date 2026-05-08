@@ -87,17 +87,17 @@ body {
 }
 
 .logo img{
-    height: 160px;
+    height: 120px;
     width: auto;
     margin-top: -25px;
     margin-bottom: -25px;
-    margin-left: 0px;
+    margin-left: -50px;
+    padding-left: 20px;
 }
 
 
 .logo:hover img {
     transform: scale(1.05); /* Slight pop when hovering */
-    filter: drop-shadow(0 0 12px rgba(0, 217, 255, 0.9));
 }
 
 /* ===== HERO ===== */
